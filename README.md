@@ -9,10 +9,10 @@ substitueix l'examen parcial de LP durant l'Era del Confinament.
 Es demana que feu un programa en Haskell que permeti jugar a un humà al
 quatre en ratlla contra diferentes estratègies de l'ordinador.
 
-<img src='4ratlla.png' width='400'>
+![](4ratlla.png)
 
 El joc del quatre en ratlla es juga en un tauler `n` × `m`, on `n` i `m` es
-defineixen al iniciar la partida. El cas més habitual és el 6 × 7, és a dir, 6
+defineixen al iniciar la partida. El cas més habitual és el 6×7, és a dir, 6
 files i 7 columnes. Cada jugador té `n`×`m` fitxes d'un mateix color. Per
 exemple, unes son vermelles i les altres grogues. Els jugadors introdueixen
 alternativament una fitxa del seu color en una columna. La fitxa cau fins
@@ -39,7 +39,7 @@ permet posar en ratlla el nombre més alt de fitxes pròpies. En cas
 d'empat, tria a l'atzar.
 
 - estratègia `smart`: trieu vosaltres una estratègia el més astuta possible.
-Es valorarà la qualitat d'aquesta estratègia.
+Es valorarà la qualitat d'aquesta estratègia. No hauria de ser massa lenta (3 segons màxim per jugada).
 
 
 ## Lliurament
@@ -48,19 +48,22 @@ Només heu de lliurar un fitxer ZIP que, al descomprimir-se,
 generi els fitxers següents:
 
 - `joc.hs`: el codi del vostre programa,
+
 - `README.md`: la documentació de la vostra pràctica,
+
 - `*.png` si cal adjuntar imatges a la documentació.
 
 Res més. Sense directoris ni subdirectoris.
 
 El codi s'ha de poder compilar i generar un executable amb la comanda
-`ghc joc.hs`. Totes les funcions i tipus han d'estar
+`ghc joc.hs`. Totes les funcions i
+definicions de tipus han d'estar
 documentades en el propi codi amb comentaris adients.
 
 El projecte ha de contenir un fitxer `README.md` que el documenti
 adequadament. Vegeu, per
-exemple, https://gist.github.com/PurpleBooth/109311bb0361f32d87a2. Si us calen
-imatges al `README.md`, deseu-los com a fitxers PNG.
+exemple, [aquest document](https://gist.github.com/PurpleBooth/109311bb0361f32d87a2). Si us calen
+imatges al `README.md`, deseu-les com a fitxers PNG.
 
 El lliurament s'ha de fer a través del Racó, abans del **diumenge 26 d'abril a les
 23:59**.
