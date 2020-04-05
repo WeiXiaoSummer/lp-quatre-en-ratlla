@@ -35,8 +35,8 @@ Cal que programeu tres estratègies:
 - estratègia `random`: cada tirada de l'ordinador és una columna a l'atzar.
 
 - estratègia `greedy`: cada tirada de l'ordinador és a la columna que li
-permet posar en ratlla el nombre més alt de fitxes pròpies. En cas
-d'empat, tria a l'atzar.
+permet posar en ratlla el nombre més alt de fitxes pròpies i que evita que el contrari faci 4-en-ratlla a la jugada següent. En cas
+d'empat, tria arbitràriament.
 
 - estratègia `smart`: trieu vosaltres una estratègia el més astuta possible.
 Es valorarà la qualitat d'aquesta estratègia. No hauria de ser massa lenta (3 segons màxim per jugada).
