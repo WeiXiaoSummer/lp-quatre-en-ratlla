@@ -35,11 +35,52 @@ Cal que programeu tres estratègies:
 - estratègia `random`: cada tirada de l'ordinador és una columna a l'atzar.
 
 - estratègia `greedy`: cada tirada de l'ordinador és a la columna que li
-permet posar en ratlla el nombre més alt de fitxes pròpies i que evita que el contrari faci 4-en-ratlla a la jugada següent. En cas
+permet posar en ratlla el nombre més alt de fitxes pròpies i que evita
+(si pot) que el contrari faci 4-en-ratlla a la jugada següent. En cas
 d'empat, tria arbitràriament.
 
 - estratègia `smart`: trieu vosaltres una estratègia el més astuta possible.
-Es valorarà la qualitat d'aquesta estratègia. No hauria de ser massa lenta (3 segons màxim per jugada).
+No hauria de ser massa lenta (un parell de segons màxim per jugada, diguem).
+
+
+## Nombres aleatoris en Haskell
+
+El programa següent mostra com treballar senzillament amb nombres aleatoris en
+Haskell:
+
+```haskell
+import System.Random
+
+randInt :: Int -> Int -> IO Int
+-- randInt low high is an IO action that returns a
+-- pseudo-random integer between low and high (both included).
+
+randInt low high = do
+    random <- randomIO :: IO Int
+    let result = low + random `mod` (high - low + 1)
+    return result
+
+main :: IO ()
+-- main program that throws two dice.
+
+main = do
+    r1 <- randInt 1 6
+    r2 <- randInt 1 6
+    print (r1, r2)
+```
+
+Fixeu-vos que els nombres aleatoris s'obtenen dins de la mònada IO,
+utilitzant l'acció
+`randomIO :: IO a`
+on `a` pot ser `Bool`, `Char`, `Double`, `Float`, `Int`, `Integer`...
+
+Per poder importar `System.Random`, segurament haureu d'instal·lar
+abans el paquet `random`:
+
+```bash
+> cabal update
+> cabal install --lib random
+```
 
 
 ## Lliurament
@@ -71,14 +112,20 @@ El lliurament s'ha de fer a través del Racó, abans del **diumenge 26 d'abril a
 
 ## Observacions
 
-L'enunciat deixa obertes moltes qüestions intencionadament (qui comença, estratègia
+- L'enunciat deixa obertes moltes qüestions intencionadament (qui comença, estratègia
 astuta, entrada/sortida, ...). Sou els responsables de prendre les vostres
 pròpies decisions i deixar-les reflectides adientment al codi i a la
 documentació. Ara bé, fixeu-vos que és imperatiu que les funcions del joc siguin
 funcions d'ordre superior que reben l'estratègia com a paràmetre.
 
-Per evitar problemes de còpies, no pengeu el vostre projecte en repositoris
+- Intenteu desacoplar tant som sigui possible l'entrada/sortida del càlcul.
+
+- Es valorarà la qualitat i originalitat de la vostra  estratègia `smart`.
+
+- Es valorarà l'ús de funcions d'ordre superior i de les construccions pròpies a Haskell.
+
+- S'utilitzaran programes detectors de plagi per detectar possibles còpies.
+
+- Per evitar problemes de còpies indesitjades, no pengeu el vostre projecte en repositoris
 públics. Si us cal un repositori GIT, useu [GITLAB
 FIB](https://gitlab.fib.upc.edu/users/sign_in).
-
-> Falta explicar com fer randoms.
