@@ -1,11 +1,10 @@
 # Quatre en ratlla
 
+Aquesta pàgina descriu **Quatre en ratlla**, la pràctica de Haskell que
+substitueix l'examen parcial de LP durant l'Era del Confinament.
+
+
 ## Presentació
-
-
-Aquesta pàgina descriu el projecte Quatre en ratlla, que correspon a la
-pràctica de Haskell que substitueix l'examen parcial de LP durant l'Era del
-Confinament.
 
 Es demana que feu un programa en Haskell que permeti jugar a un humà al
 quatre en ratlla contra diferentes estratègies de l'ordinador.
@@ -31,7 +30,7 @@ el tauler i el jugador a qui toca moure i retorna la columna on posar la seva
 fitxa. Heu de fer que les funcions del joc siguin parametritzades amb
 l'estratègia escollida.
 
-Cal que programeu diverses estratègies:
+Cal que programeu tres estratègies:
 
 - estratègia `random`: cada tirada de l'ordinador és una columna a l'atzar.
 
@@ -63,8 +62,8 @@ adequadament. Vegeu, per
 exemple, https://gist.github.com/PurpleBooth/109311bb0361f32d87a2. Si us calen
 imatges al `README.md`, deseu-los com a fitxers PNG.
 
-El lliurament s'ha de fer a través del Racó, abans del dia 26 d'abril a les
-23:59.
+El lliurament s'ha de fer a través del Racó, abans del **diumenge 26 d'abril a les
+23:59**.
 
 
 ## Observacions
