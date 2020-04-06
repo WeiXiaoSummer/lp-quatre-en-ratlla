@@ -75,12 +75,24 @@ utilitzant l'acció
 on `a` pot ser `Bool`, `Char`, `Double`, `Float`, `Int`, `Integer`...
 
 Per poder importar `System.Random`, segurament haureu d'instal·lar
-abans el paquet `random`:
+abans el paquet `random`. En Mac:
 
 ```bash
+> brew install cabal-install
 > cabal update
 > cabal install --lib random
 ```
+
+En Ubuntu:
+
+```bash
+> sudo apt install cabal-install
+> cabal update
+> cabal install random
+```
+
+Sembla que segons els sistema i la versió cal jugar una mica
+amb el `--lib`.
 
 
 ## Lliurament
