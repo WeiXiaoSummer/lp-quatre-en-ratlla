@@ -104,7 +104,9 @@ generi els fitxers següents:
 
 - `README.md`: la documentació de la vostra pràctica,
 
-- `*.png` si cal adjuntar imatges a la documentació.
+- `*.png` si cal adjuntar imatges a la documentació,
+
+- `document.pdf|png|jpeg` amb el [Compromís d'integritat acadèmica de la UPC](https://www.upc.edu/ca/sala-de-premsa/pdfs/compromis_integritat_academica-final.pdf) signat 🆕.
 
 Res més. Sense directoris ni subdirectoris.
 
